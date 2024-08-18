@@ -9,7 +9,7 @@ import TableCell from "@mui/material/TableCell";
 const NewUserTable = () => {
 
     return (
-        <TableContainer   component={Paper} sx={{ width: '600px' , mx: 'auto' }} >
+        <TableContainer   component={Paper} sx={{ width: '600px' , mx: 'auto', mb:30 }} >
             <Table sx={{  width: 1 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
