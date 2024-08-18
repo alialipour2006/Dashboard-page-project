@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { RtlProvider } from '/RtlProvider.tsx';
+import { RtlProvider } from './RtlProvider.tsx';
 import theme from "./theme.ts";
 import {ThemeProvider} from "@mui/material";
 import './App.css'
