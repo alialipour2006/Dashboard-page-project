@@ -25,15 +25,13 @@ export default function ClippedDrawer() {
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-          {pages.map((page) => (
-            <Link to={`/${page}`} key={page}>
+          {pages.map((page) => (      
+                <Link to={`/${page}`} key={page}>
                 <Typography  style ={{ margin: "0 20px", color: '#fff', display: 'inline' }}>
-                  
-                     {page}
-                  
+                     {page}   
                 </Typography>
-                </Link>
-            ))}
+                </Link>      
+))}
           </Typography>
         </Toolbar>
       </AppBar>

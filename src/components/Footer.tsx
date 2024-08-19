@@ -8,8 +8,6 @@ import ShareIcon from '@mui/icons-material/Share';
 import { Box, Container,  Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
-
-
 export default function Footer(){
     const actions = [
         { icon: <FileCopyIcon />, name: 'Copy' },
@@ -24,14 +22,10 @@ export default function Footer(){
           position: "absolute",
           bottom: 0,
           width: '100%'
-                }));
-       
-        
+        }));
     return (
         <>
- 
-        <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 , position: 'fixed', bottom: 0, left: 250}}>
-         
+        <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 , position: 'fixed', bottom: 0, left: 250}}> 
           <SpeedDial
             ariaLabel="SpeedDial basic example"
             sx={{ position: 'absolute', bottom: 16, left: 16 }}
@@ -48,12 +42,11 @@ export default function Footer(){
            </Box >
             <FooterWrapper >
             <Container>
-      
+
               <Typography variant="h3">Footer</Typography>
-           
+
             </Container>
           </FooterWrapper>
           </>
       );
-
-}
+    }
