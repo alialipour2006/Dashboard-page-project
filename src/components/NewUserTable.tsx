@@ -6,7 +6,7 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import useStore from "../useStore.ts";
 import TableBody from "@mui/material/TableBody";
-import UserInfoPopOver from "./UserInfoPopOver.tsx";
+import UserInfoDialog from "./UserInfoDialog.tsx";
 import FormatDate from "./FormatDate.tsx";
 
 const NewUserTable = () => {
@@ -35,7 +35,7 @@ const NewUserTable = () => {
                                 <TableCell>{row.lastName}</TableCell>
                                 <TableCell>{row.mobile}</TableCell>
                                 <TableCell><FormatDate timestamp={row.createTime}/></TableCell>
-                                <TableCell><UserInfoPopOver user={row}/></TableCell>
+                                <TableCell><UserInfoDialog user={row}/></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

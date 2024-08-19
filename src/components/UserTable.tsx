@@ -7,7 +7,7 @@ import TableCell from "@mui/material/TableCell";
 import useStore from "../useStore.ts";
 import TableBody from "@mui/material/TableBody";
 import DataManager from "./DataManager.tsx";
-import UserInfoPopOver from "./UserInfoPopOver.tsx";
+import UserInfoPopOver from "./UserInfoDialog.tsx";
 import FormatDate from "./FormatDate.tsx";
 
 const NewUserTable = () => {
