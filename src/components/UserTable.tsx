@@ -9,14 +9,20 @@ import TableBody from "@mui/material/TableBody";
 import DataManager from "./DataManager.tsx";
 import UserInfoPopOver from "./UserInfoDialog.tsx";
 import FormatDate from "./FormatDate.tsx";
+import SearchInput from "./SearchUser.tsx";
+import {Stack} from "@mui/material";
 
-const NewUserTable = () => {
-    const {user} = useStore();
+
+const UserTable = () => {
+    const filteredUsers = useStore((state) => state.filteredUsers());
 
 
     return (
         <>
-            <DataManager/>
+            <Stack>
+                <SearchInput/>
+                <DataManager/>
+            </Stack>
             <TableContainer component={Paper} sx={{width: '800px', mx: 'auto'}}>
                 <Table sx={{width: 1, tableLayout: 'fixed'}} aria-label="simple table">
                     <TableHead>
@@ -29,7 +35,7 @@ const NewUserTable = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {user.map((row) => (
+                        {filteredUsers.map((row) => (
                             <TableRow
                                 key={row.id}>
                                 <TableCell>{row.name}</TableCell>
@@ -42,9 +48,11 @@ const NewUserTable = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
+
+
         </>
     );
 };
 
 
-export default NewUserTable;
+export default UserTable;
