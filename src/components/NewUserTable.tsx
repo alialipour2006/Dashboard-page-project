@@ -4,45 +4,46 @@ import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
-// import TableBody from "@mui/material/TableBody";
+import useStore from "../useStore.ts";
+import TableBody from "@mui/material/TableBody";
+import DataManager from "./DataManager.tsx";
+import UserInfoPopOver from "./UserInfoPopOver.tsx";
+import FormatDate from "./FormatDate.tsx";
 
 const NewUserTable = () => {
+    const {data} = useStore();
 
     return (
-        <TableContainer   component={Paper} sx={{ width: '600px' , mx: 'auto', mb:30 }} >
-            <Table sx={{  width: 1 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>نام</TableCell>
-                        <TableCell >نام خانوادگی</TableCell>
-                        <TableCell >شماره موبایل</TableCell>
-                        <TableCell >تاریخ ثبت نام</TableCell>
-                        <TableCell >عملیات</TableCell>
-                    </TableRow>
-                </TableHead>
-                {/*<TableBody>*/}
-                {/*    {rows.map((row) => (*/}
-                {/*        <TableRow*/}
-                {/*            key={row.name}*/}
-                {/*            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}*/}
-                {/*        >*/}
-                {/*            <TableCell component="th" scope="row">*/}
-                {/*                {row.name}*/}
-                {/*            </TableCell>*/}
-                {/*            <TableCell align="right">{row.calories}</TableCell>*/}
-                {/*            <TableCell align="right">{row.fat}</TableCell>*/}
-                {/*            <TableCell align="right">{row.carbs}</TableCell>*/}
-                {/*            <TableCell align="right">{row.protein}</TableCell>*/}
-                {/*        </TableRow>*/}
-                {/*    ))}*/}
-                {/*</TableBody>*/}
-            </Table>
-        </TableContainer>
-
+        <>
+            <DataManager/>
+            <TableContainer component={Paper} sx={{width: '800px', mx: 'auto'}}>
+                <Table sx={{width: 1, tableLayout: 'fixed'}} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell style={{width: '40%'}}>نام</TableCell>
+                            <TableCell style={{width: '40%'}}>نام خانوادگی</TableCell>
+                            <TableCell style={{width: '40%'}}>شماره موبایل</TableCell>
+                            <TableCell style={{width: '40%'}}>تاریخ ثبت نام</TableCell>
+                            <TableCell style={{width: '40%'}}>عملیات</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {data.map((row) => (
+                            <TableRow
+                                key={row.id}>
+                                <TableCell>{row.name}</TableCell>
+                                <TableCell>{row.lastName}</TableCell>
+                                <TableCell>{row.mobile}</TableCell>
+                                <TableCell><FormatDate timestamp={row.createTime}/></TableCell>
+                                <TableCell><UserInfoPopOver user={row}/></TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </>
     );
 };
-
-
 
 
 export default NewUserTable;
