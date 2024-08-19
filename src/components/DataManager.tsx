@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import {Button} from "@mui/material";
 
 const DataManager: React.FC = () => {
-    const {addData, updateData} = useStore();
+    const {addUser, updateUser} = useStore();
 
     const handleAddData = () => {
         const newData = {
@@ -27,17 +27,17 @@ const DataManager: React.FC = () => {
             clubRate: 34332,
 
         }
-        addData(newData);
+        addUser(newData);
     };
 
     const handleUpdateData = () => {
-        updateData(1, {name: "حسین"});
+        updateUser(1, {name: "حسین"});
     };
 
     return (
         <Box>
-            <Button onClick={handleAddData}>Add Data</Button>
-            <Button onClick={handleUpdateData}>Update Data</Button>
+            <Button onClick={handleAddData}>ایجاد کاربر جدید</Button>
+            <Button onClick={handleUpdateData}></Button>
         </Box>
     );
 };

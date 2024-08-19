@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import data from "./data/data.ts";
+import userData from "./data/user-data.ts";
 
 export interface Order {
     id: number;
@@ -24,23 +24,23 @@ export interface User {
 }
 
 interface StateStore {
-    data: User[];
-    addData: (newData: User) => void;
+    user: User[];
+    addUser: (newUser: User) => void;
     //Partial<MyObject> is used in the updateData function to allow updating only specific fields of MyObject
-    updateData: (id: number, updatedData: Partial<User>) => void;
+    updateUser: (id: number, updatedData: Partial<User>) => void;
 
 }
 
 // Create the store
 export const useStore = create<StateStore>((set) => ({
-    data: data,
-    addData: (newData) =>
+    user: userData,
+    addUser: (newData) =>
         set((state) => ({
-            data: [...state.data, newData],
+            user: [...state.user, newData],
         })),
-    updateData: (id, updatedData) =>
+    updateUser: (id, updatedData) =>
         set((state) => ({
-            data: state.data.map((item) =>
+            user: state.user.map((item) =>
                 item.id === id ? {...item, ...updatedData} : item
             ),
         })),

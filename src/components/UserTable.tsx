@@ -11,7 +11,7 @@ import UserInfoPopOver from "./UserInfoPopOver.tsx";
 import FormatDate from "./FormatDate.tsx";
 
 const NewUserTable = () => {
-    const {data} = useStore();
+    const {user} = useStore();
 
 
     return (
@@ -29,7 +29,7 @@ const NewUserTable = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data.map((row) => (
+                        {user.map((row) => (
                             <TableRow
                                 key={row.id}>
                                 <TableCell>{row.name}</TableCell>

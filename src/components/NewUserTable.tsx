@@ -6,18 +6,16 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import useStore from "../useStore.ts";
 import TableBody from "@mui/material/TableBody";
-import DataManager from "./DataManager.tsx";
 import UserInfoPopOver from "./UserInfoPopOver.tsx";
 import FormatDate from "./FormatDate.tsx";
 
 const NewUserTable = () => {
-    const {data} = useStore();
-    const sortedUsers = [...data].sort((a, b) => b.createTime - a.createTime).slice(0, 5);
+    const {user} = useStore();
+    const sortedUsers = [...user].sort((a, b) => b.createTime - a.createTime).slice(0, 5);
 
 
     return (
         <>
-            <DataManager/>
             <TableContainer component={Paper} sx={{width: '800px', mx: 'auto'}}>
                 <Table sx={{width: 1, tableLayout: 'fixed'}} aria-label="simple table">
                     <TableHead>
