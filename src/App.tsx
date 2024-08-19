@@ -14,8 +14,8 @@ function App() {
       <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/داشبورد" element={<Profile/>}/>
-          <Route path="/پروفایل" element={<Dashboard/>}/>
+          <Route path="/داشبورد" element={<Dashboard/>}/>
+          <Route path="/پروفایل" element={<Profile/>}/>
         </Routes>
         <Footer/>
     </BrowserRouter> 

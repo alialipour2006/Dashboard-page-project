@@ -12,7 +12,6 @@ import FormatDate from "./FormatDate.tsx";
 
 const NewUserTable = () => {
     const {data} = useStore();
-    const sortedUsers = [...data].sort((a, b) => b.createTime - a.createTime).slice(0, 5);
 
 
     return (
@@ -30,7 +29,7 @@ const NewUserTable = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {sortedUsers.map((row) => (
+                        {data.map((row) => (
                             <TableRow
                                 key={row.id}>
                                 <TableCell>{row.name}</TableCell>
