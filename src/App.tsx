@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes ,BrowserRouter} from "react-router-dom"
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Header from './pages/Header';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
@@ -13,9 +13,9 @@ function App() {
     <BrowserRouter>
       <Header/>
         <Routes>
-          <Route path="/خانه" element={<Home/>}/>
-          <Route path="/داشبورد" element={<Profile/>}/>
-          <Route path="/پروفایل" element={<Dashboard/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/داشبورد" element={<Dashboard/>}/>
+          <Route path="/پروفایل" element={<Profile/>}/>
         </Routes>
         <Footer/>
     </BrowserRouter> 

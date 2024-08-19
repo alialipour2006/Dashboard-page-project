@@ -1,7 +1,9 @@
-export default function Profile() {   
+import UserTable from "../components/UserTable.tsx";
+
+export default function Profile() {
     return(
-        <> 
-        <h1>Profile</h1>
+        <>
+            <UserTable/>
         </>       
     ) 
 };
