@@ -10,6 +10,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { borders } from '@mui/system';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -25,7 +26,7 @@ export default function ClippedDrawer() {
           <Typography variant="h6" noWrap component="div">
           {pages.map((page) => (      
                 <Link to={`/${page}`} key={page}>
-                <Typography  style ={{ margin: "0 20px", color: '#fff', display: 'inline' }}>
+                <Typography  sx={{ margin: "0 20px", color: '#fff', display: 'inline' ,backgroundColor: "#fc8900", px:3, py:2, borderRadius: 1 }}>
                      {page}   
                 </Typography>
                 </Link>      
@@ -46,7 +47,7 @@ export default function ClippedDrawer() {
         }}
       >
         <Toolbar />
-        <Box sx={{ overflow: 'hidden', alignContent: "center" }}>
+        <Box sx={{ overflow: 'hidden', alignContent: "center" ,}}>
           <List>
             {['All mail', 'Trash', 'Spam','Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem key={text} disablePadding sx={{ overflow: 'hidden', alignContent: "center" }}>

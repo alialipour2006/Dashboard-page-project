@@ -32,7 +32,7 @@ export default function Dashboard() {
     };
     const otherSetting = {
       height: 300,
-      yAxis: [{ label: 'Number of orders' }],
+      yAxis: [{ label: '' }],
       grid: { horizontal: true },
       sx: {
         [`& .${axisClasses.left} .${axisClasses.label}`]: {
@@ -55,8 +55,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: '#0d1b26',
-        color: '#ffffff',
+        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
+        color: '#195445',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -99,8 +99,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: '#0d1b26',
-        color: '#ffffff',
+        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
+        color: '#195445',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -143,8 +143,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: '#0d1b26',
-        color: '#ffffff',
+        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
+        color: '#195445',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -187,8 +187,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: '#0d1b26',
-        color: '#ffffff',
+        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
+        color: '#195445',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -225,6 +225,7 @@ export default function Dashboard() {
       </Box>
     </Card>
   </Grid>
+ 
 
 </Grid>      
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -271,11 +272,11 @@ export default function Dashboard() {
           dataKey: 'month',
           valueFormatter: (month, context) =>
             context.location === 'tick'
-              ? `${month.slice(0, 3)} \n2023`
-              : `${month} 2023`,
+              ? `${month.slice(0, 3)}`
+              : `${month}`,
         },
       ]}
-      series={[{ dataKey: 'orders', label: 'orders', valueFormatter }]}
+      series={[{ dataKey: 'orders', label: 'orders', valueFormatter }] }
       {...otherSetting}
     />
         </Grid>
