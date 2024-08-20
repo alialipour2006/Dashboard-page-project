@@ -18,7 +18,7 @@ const NewUserTable = () => {
 
     return (
         <>
-            <TableContainer component={Paper} sx={{width: '1000px', mx: 'auto', borderRadius: "20px"}}>
+            <TableContainer component={Paper} sx={{width: '90%', mx: 'auto', borderRadius: "20px"}}>
                 <Table sx={{width: 1, tableLayout: 'fixed'}} aria-label="simple table">
                     <TableHead>
                         <TableRow sx={{backgroundColor: '#243757', color: 'white'}}>

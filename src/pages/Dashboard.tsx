@@ -1,15 +1,17 @@
-import { styled } from '@mui/material/styles';
+import {styled} from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
+import {pieArcLabelClasses, PieChart} from '@mui/x-charts/PieChart';
 import useStore from "../useStore.ts";
 import "../style-dashboard.css"
-import { axisClasses } from '@mui/x-charts/ChartsAxis';
-import { BarChart } from '@mui/x-charts/BarChart';
-import { Card, Typography, Box } from '@mui/material';
+import {axisClasses} from '@mui/x-charts/ChartsAxis';
+import {BarChart} from '@mui/x-charts/BarChart';
+import {Box, Card, Typography} from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import InventoryIcon from '@mui/icons-material/Inventory';
-export default function Dashboard() {   
+import NewUserTable from "../components/NewUserTable.tsx";
+
+export default function Dashboard() {
 
     const {charts} = useStore();
     const {seless} = useStore();
@@ -281,7 +283,9 @@ export default function Dashboard() {
         </Grid>
 
 </Grid>
-       
+            <Grid sx={{margin: '50px 30px 80px 30px'}}>
+                <NewUserTable/>
+            </Grid>
   </>       
     ) 
  
