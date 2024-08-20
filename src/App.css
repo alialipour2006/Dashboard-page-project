@@ -5,7 +5,9 @@
   height: 100% !important;
   text-align: center;
 }
-body, html{
+
+body,
+html {
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -61,4 +63,3 @@ body, html{
   font-weight: bold;
   color: #fff;
 }
-
