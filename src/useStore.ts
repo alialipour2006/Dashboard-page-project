@@ -37,11 +37,14 @@ export interface User {
 }
 
 interface StateStore {
-    user: User[];
     charts: Chart[];
     seless: Seles[];
+
+    user: User[];
     addUser: (newUser: User) => void;
     updateUser: (id: number, updatedData: Partial<User>) => void;
+    deletedUsers: (id: number) => void;
+
     setSearchText: (searchText: string) => void;
     userQuery: UserQuery;
     filteredUsers: () => User[];  // Make this a function that returns a User array
@@ -50,8 +53,16 @@ interface StateStore {
 // Create the store
 export const useStore = create<StateStore>((set, get) => ({
     charts:chartData,
+
     seless:selesData,
+
+    deletedUsers: (id) =>
+        set((state) => ({
+            user: state.user.filter(item => item.id !== id)
+        })),
+
     userQuery: {},
+
     setSearchText: (searchText) => set(() => ({userQuery: {searchText}})),
 
     user: userData,
@@ -77,6 +88,7 @@ export const useStore = create<StateStore>((set, get) => ({
                 u.mobile.includes(searchText)
         );
     },
+
 }));
 
 export default useStore;

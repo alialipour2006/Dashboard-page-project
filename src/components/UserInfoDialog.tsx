@@ -3,8 +3,9 @@ import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import Typography from '@mui/material/Typography';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import {User} from "../useStore.ts";
+import {IconButton} from "@mui/material";
 
 interface Props {
     user: User;
@@ -26,14 +27,15 @@ const UserInfoDialog = ({user}: Props) => {
 
     return (
         <div>
-            <div key={user.id} style={{display: 'inline-block', margin: '10px'}}>
-                <Typography
+            <div key={user.id} style={{display: 'inline-block'}}>
+                <IconButton
                     aria-haspopup="true"
                     onClick={() => handleDialogOpen(user)}
                     style={{cursor: 'pointer'}}
+                    sx={{color: '#00e676'}}
                 >
-                    <VisibilityOutlinedIcon/>
-                </Typography>
+                    <RemoveRedEyeOutlinedIcon/>
+                </IconButton>
 
                 <Dialog
                     open={open}

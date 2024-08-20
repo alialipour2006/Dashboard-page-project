@@ -16,7 +16,7 @@ const SearchInput = () => {
         }}>
             <TextField
                 inputRef={ref}
-                placeholder="Search games..."
+                placeholder="جستجو"
                 sx={{maxWidth: '300px'}}
                 InputProps={{
                     startAdornment: (
@@ -24,7 +24,7 @@ const SearchInput = () => {
                             <SearchIcon/>
                         </InputAdornment>
                     ),
-                    sx: {borderRadius: 20}
+                    sx: {borderRadius: 20, backgroundColor: '#243757', color: 'white'}
                 }}
             />
         </form>

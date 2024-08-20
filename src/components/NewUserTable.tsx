@@ -8,6 +8,8 @@ import useStore from "../useStore.ts";
 import TableBody from "@mui/material/TableBody";
 import UserInfoDialog from "./UserInfoDialog.tsx";
 import FormatDate from "./FormatDate.tsx";
+import Checkbox from "@mui/material/Checkbox";
+import {Stack} from "@mui/material";
 
 const NewUserTable = () => {
     const {user} = useStore();
@@ -16,26 +18,40 @@ const NewUserTable = () => {
 
     return (
         <>
-            <TableContainer component={Paper} sx={{width: '800px', mx: 'auto'}}>
+            <TableContainer component={Paper} sx={{width: '1000px', mx: 'auto', borderRadius: "20px"}}>
                 <Table sx={{width: 1, tableLayout: 'fixed'}} aria-label="simple table">
                     <TableHead>
-                        <TableRow>
-                            <TableCell style={{width: '40%'}}>نام</TableCell>
-                            <TableCell style={{width: '40%'}}>نام خانوادگی</TableCell>
-                            <TableCell style={{width: '40%'}}>شماره موبایل</TableCell>
-                            <TableCell style={{width: '40%'}}>تاریخ ثبت نام</TableCell>
-                            <TableCell style={{width: '40%'}}>عملیات</TableCell>
+                        <TableRow sx={{backgroundColor: '#243757', color: 'white'}}>
+
+                            <TableCell style={{width: '20%', textAlign: "center"}}>#</TableCell>
+                            <TableCell style={{width: '50%', textAlign: "center"}}>نام</TableCell>
+                            <TableCell style={{width: '50%', textAlign: "center"}}>نام خانوادگی</TableCell>
+                            <TableCell style={{width: '50%', textAlign: "center"}}>شماره موبایل</TableCell>
+                            <TableCell style={{width: '50%', textAlign: "center"}}>تاریخ ثبت نام</TableCell>
+                            <TableCell style={{width: '50%', textAlign: "center"}}>عملیات</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {sortedUsers.map((row) => (
                             <TableRow
-                                key={row.id}>
-                                <TableCell>{row.name}</TableCell>
-                                <TableCell>{row.lastName}</TableCell>
-                                <TableCell>{row.mobile}</TableCell>
-                                <TableCell><FormatDate timestamp={row.createTime}/></TableCell>
-                                <TableCell><UserInfoDialog user={row}/></TableCell>
+                                key={row.id}
+                                sx={{backgroundColor: '#161d26', color: 'white'}}
+                            >
+
+                                <TableCell sx={{borderRight: "solid 2px #272727", textAlign: "center"}}>
+                                    <Checkbox/>
+                                </TableCell>
+                                <TableCell sx={{textAlign: "center"}}>{row.name}</TableCell>
+                                <TableCell sx={{textAlign: "center"}}>{row.lastName}</TableCell>
+                                <TableCell sx={{textAlign: "center"}}>{row.mobile}</TableCell>
+                                <TableCell sx={{textAlign: "center"}}><FormatDate
+                                    timestamp={row.createTime}/></TableCell>
+                                <TableCell sx={{textAlign: "center"}}>
+                                    <Stack direction="row" justifyContent="center">
+                                        <UserInfoDialog user={row}/>
+
+                                    </Stack>
+                                </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
