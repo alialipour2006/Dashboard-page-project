@@ -3,7 +3,7 @@ export default function Header(){
 return (
   <>
   <SideBar />
-</>
+  </>
 );
   }
     
