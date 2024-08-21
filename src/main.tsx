@@ -9,10 +9,10 @@ import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-        <ThemeProvider theme={theme}>
-        <RtlProvider>
+    <ThemeProvider theme={theme}>
+      <RtlProvider>
         <App />
-        </RtlProvider>
-        </ThemeProvider>
+      </RtlProvider>
+    </ThemeProvider>
   </StrictMode>,
 );

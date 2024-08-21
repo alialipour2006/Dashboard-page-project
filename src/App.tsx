@@ -2,9 +2,7 @@ import './App.css';
 import Allroute from './Allroute';
 
 function App() {
-  return (
-      <Allroute />
-  );
+  return <Allroute />;
 }
 
 export default App;

@@ -1,22 +1,22 @@
 .swiperr-item {
-    background-color: #01a5fe;
-    width: 80% !important;
-    height: 200px !important;
-    text-align: center !important;
+  background-color: #01a5fe;
+  width: 80% !important;
+  height: 200px !important;
+  text-align: center !important;
 }
 
 .swiper-parent {
-    background-color: #253859;
-    width: 100% !important;
-    height: 300px !important;
-    margin: 0px !important;
-    border-radius: 20px;
-    text-align: center !important;
-    c: 0;
+  background-color: #253859;
+  width: 100% !important;
+  height: 300px !important;
+  margin: 0px !important;
+  border-radius: 20px;
+  text-align: center !important;
+  c: 0;
 }
 
 .chart-orders {
-    background-color: #1a2731;
-    width: 100% !important;
-    border-radius: 20px;
+  background-color: #1a2731;
+  width: 100% !important;
+  border-radius: 20px;
 }
