@@ -36,7 +36,8 @@ export default function NavBar() {
         position='fixed'
         sx={{ zIndex: 999999, backgroundColor: '#004d3f', backgroundImage: 'none' }}
       >
-        <Container  maxWidth={false} sx={{ width: "100%",marginLeft:"70px"}} >
+       <Box sx={{marginLeft:"70px"}}>
+        <Container  maxWidth={false} sx={{ width: "100%"}} >
           <Toolbar disableGutters >
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } }} />
             <Typography
@@ -155,6 +156,7 @@ export default function NavBar() {
             </Box>
           </Toolbar>
         </Container>
+        </Box>
       </AppBar>
     </>
   );
