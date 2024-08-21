@@ -7,7 +7,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from '@mui/material/Link';
-const withLink = (to, children) => <Link href={to} target="_blank" sx={{mt: 1}}>{children}</Link>;
+const withLink = (to:string, children) => <Link href={to} target="_blank" sx={{mt: 1}}>{children}</Link>;
 const actions = [
   { icon: withLink("", <InstagramIcon />), name: 'Instagram'  },
   { icon: withLink("", <TelegramIcon />), name: 'Telegram' },
