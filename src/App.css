@@ -10,5 +10,7 @@ body,
 html {
   background-color: #161d26 !important;
 }
-
+a {
+  color: #fff !important;
+}
 
