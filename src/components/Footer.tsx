@@ -31,7 +31,7 @@ export default function Footer() {
     >      
       <SpeedDial ariaLabel='SpeedDial basic example' icon={<SpeedDialIcon  sx={{backgroundColor: "#004d3f" , color: "#fff"}}/>} sx={{color: "#fff",}} FabProps={{  style: { backgroundColor: "#004d3f" } }}>
         {actions.map((action) => (
-                      <SpeedDialAction  key={action.name} icon={action.icon} tooltipTitle={action.name} sx={{backgroundColor: "#004d3f" }} />
+                      <SpeedDialAction  key={action.name} icon={action.icon} tooltipTitle={action.name} sx={{backgroundColor: "#1a2731"  }} />
         ))}
       </SpeedDial>
     </Box>
