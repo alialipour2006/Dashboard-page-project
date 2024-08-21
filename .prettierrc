@@ -1,0 +1,10 @@
+{
+  "arrowParens": "always",
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "printWidth": 95,
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSpacing": true,
+  "tailwindConfig": "./tailwind.config.js"
+}
