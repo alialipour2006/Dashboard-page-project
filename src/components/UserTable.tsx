@@ -47,7 +47,7 @@ const UserTable = () => {
       <Stack
         direction='row'
         spacing={2}
-        sx={{ mb: 2, justifyContent: 'space-between', width: '90%', mx: 'auto' }}
+        sx={{ mb: 2, justifyContent: 'space-between', width: '100%', mx: 'auto' }}
       >
         <SearchInput />
         <UserDataManager />
@@ -55,7 +55,7 @@ const UserTable = () => {
 
       <TableContainer
         component={Paper}
-        sx={{ width: '100%', mx: 'auto', borderRadius: '20px' }}
+        sx={{ width: '100%', mx: 'auto', borderRadius: '12px' }}
       >
         <Table sx={{ width: 1, tableLayout: 'fixed' }} aria-label='simple table'>
           <TableHead>

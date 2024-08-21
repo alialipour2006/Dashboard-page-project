@@ -19,7 +19,7 @@ const NewUserTable = () => {
     <>
       <TableContainer
         component={Paper}
-        sx={{ width: '100%', mx: 'auto', borderRadius: '20px' }}
+        sx={{ width: '100%', mx: 'auto', borderRadius: '12px' }}
       >
         <Table sx={{ width: 1, tableLayout: 'fixed' }} aria-label='simple table'>
           <TableHead>

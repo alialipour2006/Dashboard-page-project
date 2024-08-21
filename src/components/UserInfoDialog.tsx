@@ -44,8 +44,23 @@ const UserInfoDialog = ({ user }: Props) => {
         >
           {selectedUser && (
             <>
-              <DialogTitle id={`dialog-title-${user.id}`}>اطلاعات کاربران</DialogTitle>
-              <DialogContent>
+              <DialogTitle
+                id={`dialog-title-${user.id}`}
+                sx={{
+                  backgroundColor: '#004D3F',
+                  color: 'white',
+                  padding: '30px',
+                }}
+              >
+                اطلاعات کاربران
+              </DialogTitle>
+              <DialogContent
+                sx={{
+                  backgroundColor: '#004D3F',
+                  color: 'white',
+                  padding: '60px',
+                }}
+              >
                 <Typography variant='body2'>
                   نام و نام خانوادگی: {selectedUser.name} {selectedUser.lastName}
                 </Typography>

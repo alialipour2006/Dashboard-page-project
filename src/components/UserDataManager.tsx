@@ -40,7 +40,7 @@ const UserDataManager: React.FC = () => {
         sx={{
           backgroundColor: '#004D3F',
           color: 'white',
-          borderRadius: '10px',
+          borderRadius: '12px',
           padding: '16px 30px',
           maxWidth: '400px',
           marginX: '10px',
@@ -53,7 +53,7 @@ const UserDataManager: React.FC = () => {
         sx={{
           backgroundColor: '#004D3F',
           color: 'white',
-          borderRadius: '10px',
+          borderRadius: '12px',
           padding: '16px 30px',
           maxWidth: '400px',
         }}
