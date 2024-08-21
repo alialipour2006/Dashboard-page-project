@@ -8,7 +8,7 @@ export default function TotalProducts(){
     return (
         <>
              <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto" , width: "100%"}}>
           <Card
             sx={{
               display: 'flex',
@@ -52,7 +52,7 @@ export default function TotalProducts(){
             </Box>
           </Card>
         </Grid>
-        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto" , width: "100%"}}>
           <Card
             sx={{
               display: 'flex',
@@ -96,7 +96,7 @@ export default function TotalProducts(){
             </Box>
           </Card>
         </Grid>
-        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto" , width: "100%"}}>
           <Card
             sx={{
               display: 'flex',
@@ -140,7 +140,7 @@ export default function TotalProducts(){
             </Box>
           </Card>
         </Grid>
-        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto" , width: "100%"}}>
           <Card
             sx={{
               display: 'flex',

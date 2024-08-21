@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 export default function Allroute() {
   return (
-    <div style={{ backgroundColor: '#161d26' }}>
+    <>
       <Header />
       <div style={{ marginRight: 70, marginLeft: 10, marginTop: 100 }}>
         <Routes>
@@ -16,6 +16,6 @@ export default function Allroute() {
         </Routes>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
