@@ -47,9 +47,9 @@ const UserTable = () => {
       <Stack
         direction='row'
         spacing={2}
-        sx={{ mb: 2, justifyContent: 'space-between', width: '100%', mx: 'auto' }}
+        sx={{ justifyContent: 'space-between', width: '100%', mx: 'auto' }}
       >
-        <SearchInput  />
+        <SearchInput />
         <UserDataManager />
       </Stack>
 
