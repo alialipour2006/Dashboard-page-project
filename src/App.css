@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: vazir;
+    src: url(../assets/fonts/Vazir-Regular.woff) format("woff");
+}
+
+* {
+    font-family: "vazir" !important;
+
+}
 #root {
   width: 100%;
   margin: 0 auto;
@@ -5,7 +15,6 @@
   height: 100% !important;
   text-align: center;
 }
-
 body,
 html {
   background-color: #161d26 !important;
