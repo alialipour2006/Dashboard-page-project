@@ -8,7 +8,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 export default function Dashboard() {
   return <>
        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item sm={6} md={3}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
           <Card
             sx={{
               display: 'flex',
@@ -52,7 +52,7 @@ export default function Dashboard() {
             </Box>
           </Card>
         </Grid>
-        <Grid item sm={6} md={3}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
           <Card
             sx={{
               display: 'flex',
@@ -96,7 +96,7 @@ export default function Dashboard() {
             </Box>
           </Card>
         </Grid>
-        <Grid item sm={6} md={3}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
           <Card
             sx={{
               display: 'flex',
@@ -140,7 +140,7 @@ export default function Dashboard() {
             </Box>
           </Card>
         </Grid>
-        <Grid item sm={6} md={3}>
+        <Grid item sm={6} md={3} sx={{margin: "0 auto"}}>
           <Card
             sx={{
               display: 'flex',
