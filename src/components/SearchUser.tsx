@@ -26,7 +26,11 @@ const SearchInput = () => {
               <SearchIcon />
             </InputAdornment>
           ),
-          sx: { borderRadius: '12px', backgroundColor: '#004D3F', color: 'white' },
+          sx: {
+            borderRadius: '12px',
+            backgroundColor: '#004D3F',
+            color: 'white',
+          },
         }}
       />
     </form>

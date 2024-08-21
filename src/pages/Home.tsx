@@ -90,11 +90,9 @@ export default function Home() {
     />
         </Grid>
       </Grid>
-      <Grid sx={{ margin: '0', mt:3, mb:10}}>
+      <Grid sx={{ mt: 3, mb: 10 }}>
         <NewUserTable />
       </Grid>
     </>
   );
 }
-
-
