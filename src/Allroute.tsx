@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes,BrowserRouter } from 'react-router-dom';
+
 import Header from './components/Header';
 import Home from './pages/Home';
 
@@ -8,6 +9,8 @@ import Footer from './components/Footer';
 export default function Allroute() {
   return (
     <>
+        <BrowserRouter>
+
       <Header />
       <div style={{ marginRight: 70, marginLeft: 10, marginTop: 100 }}>
         <Routes>
@@ -16,6 +19,8 @@ export default function Allroute() {
         </Routes>
       </div>
       <Footer />
+      </BrowserRouter>
+
     </>
   );
 }
