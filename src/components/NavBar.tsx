@@ -36,9 +36,9 @@ export default function NavBar() {
         position='fixed'
         sx={{ zIndex: 999999, backgroundColor: '#004d3f', backgroundImage: 'none' }}
       >
-        <Container maxWidth='xl'>
-          <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+        <Container  maxWidth={false} sx={{ width: "100%",marginLeft:"70px"}} >
+          <Toolbar disableGutters >
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } }} />
             <Typography
               variant='h6'
               noWrap
@@ -57,7 +57,7 @@ export default function NavBar() {
               LOGO
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' , mr: 0} }}>
               <IconButton
                 size='large'
                 aria-label='account of current user'
