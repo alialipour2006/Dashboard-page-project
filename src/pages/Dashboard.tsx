@@ -1,30 +1,29 @@
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
-import useStore from "../useStore.ts";
-import "../style-dashboard.css"
+import { pieArcLabelClasses, PieChart } from '@mui/x-charts/PieChart';
+import useStore from '../useStore.ts';
+import '../style-dashboard.css';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 import { BarChart } from '@mui/x-charts/BarChart';
-import { Card, Typography, Box } from '@mui/material';
+import { Box, Card, Typography } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import InventoryIcon from '@mui/icons-material/Inventory';
-export default function Dashboard() {   
+import NewUserTable from '../components/NewUserTable.tsx';
 
-    const {charts} = useStore();
-    const {seless} = useStore();
-    const data = [...charts];
-    const dataset = [...seless];
+export default function Dashboard() {
+  const { charts } = useStore();
+  const { seless } = useStore();
+  const data = [...charts];
+  const dataset = [...seless];
 
-
-    const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      }));
-     
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 
     const size = {
       width:600,
@@ -55,8 +54,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
-        color: '#195445',
+        backgroundColor: '#0d1b26',
+        color: '#ffffff',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -99,8 +98,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
-        color: '#195445',
+        backgroundColor: '#0d1b26',
+        color: '#ffffff',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -143,8 +142,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
-        color: '#195445',
+        backgroundColor: '#0d1b26',
+        color: '#ffffff',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -187,8 +186,8 @@ export default function Dashboard() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        background: "radial-gradient(circle, rgba(18,55,47,1) 1%, rgba(20,40,43,1) 1%, rgba(19,36,37,1) 1%)",
-        color: '#195445',
+        backgroundColor: '#0d1b26',
+        color: '#ffffff',
         my:6,
         mx:1,
         borderRadius: 3,
@@ -225,7 +224,6 @@ export default function Dashboard() {
       </Box>
     </Card>
   </Grid>
- 
 
 </Grid>      
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -272,19 +270,18 @@ export default function Dashboard() {
           dataKey: 'month',
           valueFormatter: (month, context) =>
             context.location === 'tick'
-              ? `${month.slice(0, 3)}`
-              : `${month}`,
+              ? `${month.slice(0, 3)} \n2023`
+              : `${month} 2023`,
         },
       ]}
-      series={[{ dataKey: 'orders', label: 'orders', valueFormatter }] }
+      series={[{ dataKey: 'orders', label: 'orders', valueFormatter }]}
       {...otherSetting}
     />
         </Grid>
-
-</Grid>
-       
-  </>       
-    ) 
- 
-      
-};
+      </Grid>
+      <Grid sx={{ margin: '0', mt:3, mb:10}}>
+        <NewUserTable />
+      </Grid>
+    </>
+  );
+}
