@@ -7,7 +7,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from '@mui/material/Link';
-const withLink = (to:string, children) => <Link href={to} target="_blank" sx={{mt: 1}}>{children}</Link>;
+const withLink = (to:string, children:any) => <Link href={to} target="_blank" sx={{mt: 1}}>{children}</Link>;
 const actions = [
   { icon: withLink("", <InstagramIcon />), name: 'Instagram'  },
   { icon: withLink("", <TelegramIcon />), name: 'Telegram' },
@@ -28,10 +28,10 @@ export default function Footer() {
         bottom: 0,
         left: 70,
       }}
-    >
-      <SpeedDial ariaLabel='SpeedDial basic example' icon={<SpeedDialIcon />}>
+    >      
+      <SpeedDial ariaLabel='SpeedDial basic example' icon={<SpeedDialIcon  sx={{backgroundColor: "#004d3f" , color: "#fff"}}/>} sx={{color: "#fff",}} FabProps={{  style: { backgroundColor: "#004d3f" } }}>
         {actions.map((action) => (
-                      <SpeedDialAction key={action.name} icon={action.icon} tooltipTitle={action.name} />
+                      <SpeedDialAction  key={action.name} icon={action.icon} tooltipTitle={action.name} sx={{backgroundColor: "#004d3f" }} />
         ))}
       </SpeedDial>
     </Box>

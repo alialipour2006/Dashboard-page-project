@@ -14,6 +14,7 @@ const SearchInput = () => {
         event.preventDefault();
         if (ref.current) setSearchText(ref.current.value);
       }}
+      style={{ padding: '10px', margin: 0 }}
     >
       <TextField
         inputRef={ref}

@@ -11,7 +11,7 @@ interface UserQuery {
 export interface Chart {
   value: number;
   color: string;
-  title: string;
+  label: string;
 }
 
 export interface Seles {
