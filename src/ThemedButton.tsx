@@ -6,7 +6,7 @@ const ThemedButton: React.FC = () => {
   const theme = useTheme();
 
   return (
-    <Button variant="contained" color="primary">
+    <Button variant='contained' color='primary'>
       {theme.palette.mode === 'light' ? 'Light Mode' : 'Dark Mode'}
     </Button>
   );

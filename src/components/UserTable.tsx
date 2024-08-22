@@ -72,7 +72,7 @@ const UserTable = () => {
           </TableHead>
           <TableBody>
             {paginatedUsers.map((row) => (
-              <TableRow key={row.id} sx={{ backgroundColor: '#161d26', color: 'white' }}>
+              <TableRow key={row.id} sx={{ color: 'white' }}>
                 <TableCell sx={{ borderRight: 'solid 2px #272727', textAlign: 'center' }}>
                   <Checkbox />
                 </TableCell>

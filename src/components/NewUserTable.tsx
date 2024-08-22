@@ -36,7 +36,7 @@ const NewUserTable = () => {
           </TableHead>
           <TableBody>
             {sortedUsers.map((row) => (
-              <TableRow key={row.id} sx={{ backgroundColor: '#161d26', color: 'white' }}>
+              <TableRow key={row.id} sx={{ color: 'textSecondary' }}>
                 <TableCell sx={{ borderRight: 'solid 2px #272727', textAlign: 'center' }}>
                   <Checkbox />
                 </TableCell>

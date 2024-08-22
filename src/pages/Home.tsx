@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <TotalProducts />
-          <TotalProducts />
-          <TotalProducts />
-          <TotalProducts />
+        <TotalProducts />
+        <TotalProducts />
+        <TotalProducts />
+        <TotalProducts />
       </Grid>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item sm={12} md={6}>
@@ -22,7 +22,7 @@ export default function Home() {
         </Grid>
       </Grid>
 
-      <Grid sx={{ mt: 3, mb: 10 }}>
+      <Grid sx={{ mt: 3 }}>
         <NewUserTable />
       </Grid>
     </>

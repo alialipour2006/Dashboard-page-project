@@ -29,7 +29,7 @@ export default function ClippedDrawer() {
           [`& .MuiDrawer-paper`]: {
             width: 60,
             boxSizing: 'border-box',
-            backgroundColor: '#1a2731',
+            color: 'textSecondary',
           },
         }}
       >

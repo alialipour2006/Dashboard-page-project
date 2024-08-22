@@ -1,21 +1,16 @@
 import { createTheme } from '@mui/material/styles';
-import { create } from 'jss';
-import rtl from 'jss-rtl';
-import { StylesProvider, jssPreset } from '@mui/styles';
 
-// Configure JSS with RTL
-export const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
-
+// Configure JSS with
 // Define the light theme
 export const lightTheme = createTheme({
   direction: 'rtl', // Right-to-left direction
   palette: {
     mode: 'light',
     primary: {
-      main: '#1976d2',
+      main: '#00FF00',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#DBE0EB',
     },
   },
 });
@@ -26,7 +21,7 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#90caf9',
+      main: '#0d1b26',
     },
     secondary: {
       main: '#f48fb1',
