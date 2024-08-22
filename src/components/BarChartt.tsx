@@ -7,7 +7,6 @@ export default function BarChartt() {
   const { seless } = useStore();
   const dataset = [...seless];
   const valueFormatter = (value: number | null) => `${value} orders`;
-
   const otherSetting = {
     height: 300,
     yAxis: [{ label: '' }],

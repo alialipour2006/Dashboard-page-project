@@ -1,9 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
-// Configure JSS with
-// Define the light theme
+
 export const lightTheme = createTheme({
-  direction: 'rtl', // Right-to-left direction
+  direction: 'rtl', 
   palette: {
     mode: 'light',
     primary: {
@@ -15,9 +14,8 @@ export const lightTheme = createTheme({
   },
 });
 
-// Define the dark theme
 export const darkTheme = createTheme({
-  direction: 'rtl', // Right-to-left direction
+  direction: 'rtl', 
   palette: {
     mode: 'dark',
     primary: {

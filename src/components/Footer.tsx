@@ -16,10 +16,7 @@ const actions = [
   { icon: withLink('', <InstagramIcon />), name: 'Instagram' },
   { icon: withLink('', <TelegramIcon />), name: 'Telegram' },
   { icon: withLink('', <YouTubeIcon />), name: 'YouTube' },
-  {
-    icon: withLink('https://github.com/alialipour2006/Dashboard-page-project', <GitHubIcon />),
-    name: 'GitHub',
-  },
+  { icon: withLink('https://github.com/alialipour2006/Dashboard-page-project', <GitHubIcon />),name: 'GitHub',},
 ];
 
 export default function Footer() {
