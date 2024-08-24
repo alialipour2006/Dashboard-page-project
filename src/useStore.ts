@@ -40,7 +40,7 @@ export interface User {
 
 interface StateStore {
   charts: Chart[];
-  seless: Seles[];
+  orderData: Seles[];
 
   user: User[];
   addUser: (newUser: User) => void;
@@ -55,8 +55,7 @@ interface StateStore {
 // Create the store
 export const useStore = create<StateStore>((set, get) => ({
   charts: chartData,
-
-  seless: selesData,
+  orderData: selesData,
 
   deletedUsers: (id) =>
     set((state) => ({

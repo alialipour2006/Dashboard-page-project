@@ -4,8 +4,7 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 import { Card } from '@mui/material';
 
 export default function BarChartt() {
-  const { seless } = useStore();
-  const dataset = [...seless];
+  const { orderData } = useStore();
   const valueFormatter = (value: number | null) => `${value} orders`;
   const otherSetting = {
     height: 300,
@@ -35,7 +34,7 @@ export default function BarChartt() {
       >
         <BarChart
           style={{ width: '100%  ', color: 'textSecondary' }}
-          dataset={dataset}
+          dataset={orderData}
           xAxis={[
             {
               scaleType: 'band',

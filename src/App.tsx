@@ -1,15 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { Switch } from '@mui/material';
 import { lightTheme, darkTheme } from './theme';
-import Allroute from './Allroute';
 import { RtlProvider } from './RtlProvider.tsx';
+import AllRoute from './AllRoute.tsx';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const handleThemeChange = () => {
     setDarkMode(!darkMode);
   };
+  useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (prefersDark) {
+      setDarkMode(true);
+    } else if (prefersLight) {
+      setDarkMode(false);
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
@@ -19,7 +28,7 @@ function App() {
           checked={darkMode}
           onChange={handleThemeChange}
         />
-        <Allroute />
+        <AllRoute />
       </RtlProvider>
     </ThemeProvider>
   );
