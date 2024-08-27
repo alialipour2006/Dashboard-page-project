@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
-export default function Allroute() {
+export default function AllRoutes() {
   return (
     <BrowserRouter>
     <div style={{ paddingBottom: '100px' }}>

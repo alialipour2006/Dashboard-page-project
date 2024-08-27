@@ -7,7 +7,9 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from '@mui/material/Link';
-const withLink = (to: string, children: any) => (
+import React from 'react';
+
+const withLink = (to: string, children: React.ReactNode) => (
   <Link href={to} target='_blank' sx={{ mt: 1 }}>
     {children}
   </Link>
@@ -16,7 +18,10 @@ const actions = [
   { icon: withLink('', <InstagramIcon />), name: 'Instagram' },
   { icon: withLink('', <TelegramIcon />), name: 'Telegram' },
   { icon: withLink('', <YouTubeIcon />), name: 'YouTube' },
-  { icon: withLink('https://github.com/alialipour2006/Dashboard-page-project', <GitHubIcon />),name: 'GitHub',},
+  {
+    icon: withLink('https://github.com/alialipour2006/Dashboard-page-project', <GitHubIcon />),
+    name: 'GitHub',
+  },
 ];
 
 export default function Footer() {
@@ -28,7 +33,6 @@ export default function Footer() {
         flexGrow: 1,
         position: 'fixed',
         bottom: 0,
-        left: 70,
       }}
     >
       <SpeedDial

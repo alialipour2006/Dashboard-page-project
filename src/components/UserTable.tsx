@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import TableContainer from '@mui/material/TableContainer';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -26,12 +26,12 @@ const UserTable = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   // Handler for page change
-  const handleChangePage = (event, newPage) => {
+  const handleChangePage = (_event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
     setPage(newPage);
   };
 
   // Handler for rows per page change
-  const handleChangeRowsPerPage = (event) => {
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
@@ -73,7 +73,7 @@ const UserTable = () => {
           <TableBody>
             {paginatedUsers.map((row) => (
               <TableRow key={row.id} sx={{ color: 'white' }}>
-                <TableCell sx={{ borderRight: 'solid 2px #272727', textAlign: 'center' }}>
+                <TableCell sx={{ borderRight: 'solid 1px #272727', textAlign: 'center' }}>
                   <Checkbox />
                 </TableCell>
                 <TableCell sx={{ textAlign: 'center' }}>{row.name}</TableCell>

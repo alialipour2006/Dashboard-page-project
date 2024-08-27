@@ -1,10 +1,14 @@
-import { BarChart } from '@mui/x-charts/BarChart';
-import useStore from '../useStore.ts';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 import { Card } from '@mui/material';
+import { DatasetElementType } from '@mui/x-charts/internals';
+import useStore from '../useStore.ts';
+import { BarChart } from '@mui/x-charts';
 
-export default function BarChartt() {
-  const { orderData } = useStore();
+export default function BarChartDiagram() {
+  const orderData = useStore((state) => state.SaleData);
+
+  const dataset = orderData as unknown as DatasetElementType<string | number | Date | null | undefined>[];
+
   const valueFormatter = (value: number | null) => `${value} orders`;
   const otherSetting = {
     height: 300,
@@ -28,13 +32,12 @@ export default function BarChartt() {
           my: 6,
           mx: 1,
           borderRadius: 3,
-          padding: 2,
+          padding: 1,
           marginTop: 0,
         }}
       >
         <BarChart
-          style={{ width: '100%  ', color: 'textSecondary' }}
-          dataset={orderData}
+          dataset={dataset}
           xAxis={[
             {
               scaleType: 'band',

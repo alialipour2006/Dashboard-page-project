@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import userData from './data/user-data.ts';
 
 import chartData from './data/chart-data.ts';
-import selesData from './data/seles-data.ts';
+import saleData from './data/seles-data.ts';
 
 interface UserQuery {
   searchText?: string;
@@ -14,7 +14,8 @@ export interface Chart {
   label: string;
 }
 
-export interface Seles {
+export interface Sales {
+
   orders: number;
   month: string;
 }
@@ -40,7 +41,7 @@ export interface User {
 
 interface StateStore {
   charts: Chart[];
-  orderData: Seles[];
+  SaleData: Sales[];
 
   user: User[];
   addUser: (newUser: User) => void;
@@ -55,7 +56,7 @@ interface StateStore {
 // Create the store
 export const useStore = create<StateStore>((set, get) => ({
   charts: chartData,
-  orderData: selesData,
+  SaleData: saleData,
 
   deletedUsers: (id) =>
     set((state) => ({

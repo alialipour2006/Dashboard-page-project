@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Switch } from '@mui/material';
 import { lightTheme, darkTheme } from './theme';
 import { RtlProvider } from './RtlProvider.tsx';
-import AllRoute from './AllRoute.tsx';
+import AllRoute from './AllRoutes.tsx';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 

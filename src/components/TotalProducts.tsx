@@ -12,7 +12,7 @@ export default function TotalProducts() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            color: '#ffffff',
+            color: 'secondary',
             my: 6,
             mx: 1,
             borderRadius: 3,

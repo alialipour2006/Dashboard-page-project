@@ -2,7 +2,7 @@ import { pieArcLabelClasses, PieChart } from '@mui/x-charts/PieChart';
 import useStore from '../useStore.ts';
 import { Card } from '@mui/material';
 
-export default function PieChartt() {
+export default function PieChartDiagram() {
   const { charts } = useStore();
 
   const data = [...charts];
@@ -19,16 +19,17 @@ export default function PieChartt() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          color: '#ffffff',
           my: 6,
           mx: 1,
           borderRadius: 3,
-          padding: 2,
+          padding: 1,
           marginTop: 0,
+          width: '100%  ',
+          color: 'textSecondary',
+
         }}
       >
         <PieChart
-          style={{ width: '100%  ', color: 'textSecondary', Padding: 0 }}
           className='chart-orders'
           series={[
             {
