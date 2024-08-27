@@ -32,7 +32,7 @@ const UserInfoDialog = ({ user }: Props) => {
           aria-haspopup='true'
           onClick={() => handleDialogOpen(user)}
           style={{ cursor: 'pointer' }}
-          sx={{ color: '#00e676' }}
+          sx={{ color: '#4caf50' }}
         >
           <RemoveRedEyeOutlinedIcon />
         </IconButton>

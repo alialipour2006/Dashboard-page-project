@@ -39,7 +39,7 @@ export default function ClippedDrawer() {
             <List>
               <ListItem disablePadding>
                 <ListItemButton>
-                  <Link to='/خانه' style={{ lineHeight: 0.5 }}>
+                  <Link to='/' style={{ lineHeight: 0.5 }}>
                     <ListItemIcon>
                       <HomeIcon />
                     </ListItemIcon>
