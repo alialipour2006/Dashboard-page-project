@@ -33,6 +33,8 @@ export default function Footer() {
         flexGrow: 1,
         position: 'fixed',
         bottom: 0,
+        left: 70,
+        borderColor:"red",
       }}
     >
       <SpeedDial
