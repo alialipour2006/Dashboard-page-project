@@ -7,7 +7,9 @@ import { BarChart } from '@mui/x-charts';
 export default function BarChartDiagram() {
   const orderData = useStore((state) => state.SaleData);
 
-  const dataset = orderData as unknown as DatasetElementType<string | number | Date | null | undefined>[];
+  const dataset = orderData as unknown as DatasetElementType<
+    string | number | Date | null | undefined
+  >[];
 
   const valueFormatter = (value: number | null) => `${value} orders`;
   const otherSetting = {

@@ -33,24 +33,19 @@ export default function NavBar() {
 
   return (
     <>
-      <AppBar
-        position='fixed'
-        sx={{ zIndex: 999999, backgroundColor: '#004d3f' }}
-      >
-        <Box >
+      <AppBar position='fixed' sx={{ zIndex: 999999, backgroundColor: '#004d3f' }}>
+        <Box>
           <Container maxWidth={false}>
             <Toolbar disableGutters>
               <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } }} />
 
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'}}}>
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                   size='large'
                   aria-label='pages'
                   aria-controls='menu-appbar'
                   aria-haspopup='true'
                   onClick={handleOpenNavMenu}
-
-
                 >
                   <MenuIcon />
                 </IconButton>

@@ -26,7 +26,10 @@ const UserTable = () => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   // Handler for page change
-  const handleChangePage = (_event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
+  const handleChangePage = (
+    _event: React.MouseEvent<HTMLButtonElement> | null,
+    newPage: number,
+  ) => {
     setPage(newPage);
   };
 
