@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* FIXME: overwrite on theme  */
+
+/* FIXME: why use A tag ????  */
 
 a {
   font-weight: 500;

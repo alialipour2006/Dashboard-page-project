@@ -6,6 +6,7 @@ import { RtlProvider } from './RtlProvider.tsx';
 import { RouterProvider } from 'react-router-dom';
 import router from './router.tsx';
 function App() {
+  //FIXME: move mode to the zustand 
   const [darkMode, setDarkMode] = useState(false);
 
   const handleThemeChange = () => {
@@ -24,6 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <RtlProvider>
+        {/* FIXME: move switch to navbar */}
         <Switch
           sx={{ zIndex: 9999999, position: 'fixed', right: '80px', top: '15px' }}
           checked={darkMode}

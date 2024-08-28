@@ -13,6 +13,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        //FIXME: whattt ??????
         path: '/داشبورد',
         element: <Dashboard />,
       },
