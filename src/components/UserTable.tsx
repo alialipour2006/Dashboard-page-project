@@ -63,6 +63,7 @@ const UserTable = () => {
         <Table sx={{ width: 1, tableLayout: 'fixed' }} aria-label='simple table'>
           <TableHead>
             <TableRow sx={{ backgroundColor: '#004D3F', color: 'white' }}>
+              {/* FIXME:loooooooooop */}
               <TableCell style={{ width: '20%', textAlign: 'center' }}>#</TableCell>
               <TableCell style={{ width: '50%', textAlign: 'center' }}>نام</TableCell>
               <TableCell style={{ width: '50%', textAlign: 'center' }}>نام خانوادگی</TableCell>
