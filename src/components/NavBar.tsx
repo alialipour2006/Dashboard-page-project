@@ -36,6 +36,24 @@ export default function NavBar() {
   const handleThemeChange = () => {
     toggleMode(!darkMode);
   };
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  React.useEffect(() => {
+    if (isLoaded) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (prefersDark) {
+        toggleMode(true);
+      } else if (prefersLight) {
+        toggleMode(false);
+      }
+    }
+  }, [isLoaded]);
+
   return (
     <>
       <AppBar position='fixed' sx={{ zIndex: 999999, backgroundColor: '#004d3f' }}>
