@@ -5,7 +5,6 @@ export default [
     month: 'فرردین',
   },
   {
-
     orders: 9,
     month: 'اردیبهشت',
   },

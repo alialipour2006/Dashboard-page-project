@@ -1,8 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
-
 export const lightTheme = createTheme({
-  direction: 'rtl', 
+  direction: 'rtl',
   palette: {
     mode: 'light',
     primary: {
@@ -15,14 +14,14 @@ export const lightTheme = createTheme({
 });
 
 export const darkTheme = createTheme({
-  direction: 'rtl', 
+  direction: 'rtl',
   palette: {
     mode: 'dark',
     primary: {
       main: '#fff',
     },
     secondary: {
-      main: '#f48fb1',
+      main: '#282f35',
     },
   },
 });

@@ -3,7 +3,6 @@ import React from 'react';
 interface Props {
   timestamp: number;
 }
-// FIXME: it's not component you should replace in libs 
 // Convert Persian numbers to English numbers
 const convertPersianToEnglishNumbers = (text: string): string => {
   const persianToEnglishMap: { [key: string]: string } = {

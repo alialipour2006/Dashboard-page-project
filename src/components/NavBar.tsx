@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Switch, Toolbar, Typography } from '@mui/material';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -10,6 +10,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import useStore from '../useStore.ts';
+
 export default function NavBar() {
   const btnsNav = ['news', 'Pricing', 'Blog'];
   const settings = ['Profile', 'Account', 'Logout'];
@@ -30,13 +32,21 @@ export default function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  const { darkMode, toggleMode } = useStore();
+  const handleThemeChange = () => {
+    toggleMode(!darkMode);
+  };
   return (
     <>
       <AppBar position='fixed' sx={{ zIndex: 999999, backgroundColor: '#004d3f' }}>
         <Box>
           <Container maxWidth={false}>
             <Toolbar disableGutters>
+              <Switch
+                sx={{ zIndex: 9999999, position: 'fixed', right: '80px', top: '15px' }}
+                checked={darkMode}
+                onChange={handleThemeChange}
+              />
               <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } }} />
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

@@ -6,8 +6,7 @@
 * {
   font-family: 'vazir' !important;
 }
-
-/* FIXME: overwrite on theme  */
-a {
-  color: #fff !important;
+body {
+  padding: 0;
+  margin: 0;
 }

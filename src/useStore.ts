@@ -15,7 +15,6 @@ export interface Chart {
 }
 
 export interface Sales {
-
   orders: number;
   month: string;
 }
@@ -42,8 +41,9 @@ export interface User {
 interface StateStore {
   charts: Chart[];
   SaleData: Sales[];
-
   user: User[];
+  darkMode: boolean;
+  toggleMode: any;
   addUser: (newUser: User) => void;
   updateUser: (id: number, updatedData: Partial<User>) => void;
   deletedUsers: (id: number) => void;
@@ -57,12 +57,12 @@ interface StateStore {
 export const useStore = create<StateStore>((set, get) => ({
   charts: chartData,
   SaleData: saleData,
-
+  darkMode: false,
+  toggleMode: () => set((state) => ({ darkMode: !state.darkMode })),
   deletedUsers: (id) =>
     set((state) => ({
       user: state.user.filter((item) => item.id !== id),
     })),
-
   userQuery: {},
 
   setSearchText: (searchText) => set(() => ({ userQuery: { searchText } })),

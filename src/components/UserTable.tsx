@@ -13,13 +13,40 @@ import TableFooter from '@mui/material/TableFooter';
 import TablePagination from '@mui/material/TablePagination';
 import useStore from '../useStore.ts';
 import UserDataManager from './UserDataManager.tsx';
-import FormatDate from './FormatDate.tsx';
+import FormatDate from '../lib/FormatDate.tsx';
 import SearchInput from './SearchUser.tsx';
 import UserInfoDialog from './UserInfoDialog.tsx';
 
 const UserTable = () => {
   const filteredUsers = useStore((state) => state.filteredUsers());
   const deletedUser = useStore((state) => state.deletedUsers);
+
+  const tableCells = [
+    {
+      width: '20%',
+      text: '#',
+    },
+    {
+      width: '20%',
+      text: 'نام',
+    },
+    {
+      width: '50%',
+      text: 'نام خانوادگی',
+    },
+    {
+      width: '50%',
+      text: 'شماره موبایل',
+    },
+    {
+      width: '50%',
+      text: 'تاریخ ثبت نام',
+    },
+    {
+      width: '50%',
+      text: 'عملیات',
+    },
+  ];
 
   // State for pagination
   const [page, setPage] = useState(0);
@@ -63,15 +90,14 @@ const UserTable = () => {
         <Table sx={{ width: 1, tableLayout: 'fixed' }} aria-label='simple table'>
           <TableHead>
             <TableRow sx={{ backgroundColor: '#004D3F', color: 'white' }}>
-              {/* FIXME:loooooooooop */}
-              <TableCell style={{ width: '20%', textAlign: 'center' }}>#</TableCell>
-              <TableCell style={{ width: '50%', textAlign: 'center' }}>نام</TableCell>
-              <TableCell style={{ width: '50%', textAlign: 'center' }}>نام خانوادگی</TableCell>
-              <TableCell style={{ width: '50%', textAlign: 'center' }}>شماره موبایل</TableCell>
-              <TableCell style={{ width: '50%', textAlign: 'center' }}>
-                تاریخ ثبت نام
-              </TableCell>
-              <TableCell style={{ width: '50%', textAlign: 'center' }}>عملیات</TableCell>
+              {tableCells.map((item, index) => (
+                <TableCell
+                  key={index}
+                  style={{ width: `&{item.width}‍‍`, textAlign: 'center' }}
+                >
+                  {item.text}
+                </TableCell>
+              ))}
             </TableRow>
           </TableHead>
           <TableBody>
